@@ -1,4 +1,4 @@
-name: RUN_E2E_TESTS_DOTNET6_WCON
+name: RUN_E2E_TESTS_DOTNET8_WCON
 on:
   push:
     branches:
@@ -15,9 +15,9 @@ permissions:
   id-token: write
 
 env:
-  AZURE_FUNCTIONAPP_NAME: gae-fa-dotnet6-wcon
-  AZURE_FUNCTIONAPP_PACKAGE_PATH: './tests/e2e/dotnet6'
-  DOTNET_VERSION: '6.0.428'
+  AZURE_FUNCTIONAPP_NAME: gae-fa-dotnet8-wcon
+  AZURE_FUNCTIONAPP_PACKAGE_PATH: './tests/e2e/dotnet8'
+  DOTNET_VERSION: '8.0.405'
 
 jobs:
   run:
