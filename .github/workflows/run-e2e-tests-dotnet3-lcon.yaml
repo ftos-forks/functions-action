@@ -47,6 +47,7 @@ jobs:
       shell: pwsh
       run: |
         pushd '${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}'
+        export DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=1
         dotnet build --configuration Release --output ./output
         echo "$env:GITHUB_SHA" > ./output/sha.txt
         popd
