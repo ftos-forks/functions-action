@@ -48,8 +48,13 @@ jobs:
       shell: pwsh
       run: |
         pushd '${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}'
-        dotnet build --configuration Release --output ./output
-        pushd './output'
+        $buildOutput = dotnet build --configuration Release --output ./output
+        if ($buildOutput -contains "Build succeeded") {
+          Write-Host "Build succeeded"
+        } else {
+            Write-Host "Build failed"
+            Write-Host "Error Output: $buildOutput"
+        }
         echo "$env:GITHUB_SHA" > ./output/sha.txt
         popd
 
