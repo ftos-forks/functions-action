@@ -56,5 +56,5 @@ jobs:
     - task: DotNetCoreCLI@2
       inputs:
         command: 'build'
-        projects: 'tests/e2e/dotnet3/*.csproj'
+        projects: 'tests/e2e/dotnet8/*.csproj'
       displayName: 'Build project for csharp language'
