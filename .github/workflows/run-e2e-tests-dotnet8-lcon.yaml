@@ -58,19 +58,13 @@ jobs:
         echo "$env:GITHUB_SHA" > ./output/sha.txt
         popd
 
-    - name: 'Login via Azure CLI'
-      uses: azure/login@v1
-      with:
-        client-id: ${{ secrets.AZURE_CLIENT_ID_FA_DOTNET3_LCON }}
-        tenant-id: ${{ secrets.AZURE_TENANT_ID_FA_E2E_TESTS }}
-        subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID_FA_E2E_TESTS }}
-
     - name: E2E Run Azure Functions Action
       uses: ./
       id: fa
       with:
         app-name: ${{ env.AZURE_FUNCTIONAPP_NAME }}
         package: '${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}/output'
+        publish-profile: ${{ secrets.AZURE_PUBLISH_PROFILE_FA_DOTNET8_LCON }}
 
     - name: E2E Check HttpTrigger Result
       shell: pwsh
