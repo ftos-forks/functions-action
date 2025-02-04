@@ -18,7 +18,6 @@ env:
   AZURE_FUNCTIONAPP_NAME: gae-fa-dotnet8-lcon
   AZURE_FUNCTIONAPP_PACKAGE_PATH: './tests/e2e/dotnet8'
   DOTNET_VERSION: '8.0.405'
-  DOTNET_SYSTEM_GLOBALIZATION_INVARIANT: 1
 
 jobs:
   run:
@@ -48,13 +47,7 @@ jobs:
       shell: pwsh
       run: |
         pushd '${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}'
-        $buildOutput = dotnet build --configuration Release --output ./output
-        if ($buildOutput -contains "Build succeeded") {
-          Write-Host "Build succeeded"
-        } else {
-            Write-Host "Build failed"
-            Write-Host "Error Output: $buildOutput"
-        }
+        dotnet build --configuration Release --output ./output
         echo "$env:GITHUB_SHA" > ./output/sha.txt
         popd
 
