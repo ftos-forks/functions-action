@@ -1,5 +1,8 @@
 name: RUN_E2E_TESTS_PYTHON310_FLEXCON_TEST
 
+on:
+  workflow_dispatch:
+
 env:
   AZURE_FUNCTIONAPP_NAME: gae-fa-python310-flexcon
   AZURE_FUNCTIONAPP_PROJECT_PATH: './tests/e2e/python310'
