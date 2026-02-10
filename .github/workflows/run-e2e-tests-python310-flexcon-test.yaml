@@ -1,7 +1,16 @@
 name: RUN_E2E_TESTS_PYTHON310_FLEXCON_TEST
 
 on:
-  workflow_dispatch:
+  push:
+    branches:
+      - master
+      - dev
+      - releases/*
+    paths-ignore:
+      - '**.md'
+  pull_request:
+    paths-ignore:
+      - '**.md'
 
 env:
   AZURE_FUNCTIONAPP_NAME: gae-fa-python310-flexcon
