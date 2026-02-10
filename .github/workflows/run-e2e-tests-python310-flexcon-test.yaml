@@ -60,7 +60,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: ${{ env.BUILD_ARTIFACT_NAME }}
-          path: '${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}/downloaded-artifact'
+          path: '${{ env.AZURE_FUNCTIONAPP_PROJECT_PATH }}/downloaded-artifact'
 
       - name: 'Login via Azure CLI'
         uses: azure/login@v2
@@ -74,4 +74,4 @@ jobs:
         id: deploy-to-function-app
         with:
           app-name: ${{ env.AZURE_FUNCTIONAPP_NAME }}
-          package: '${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}/downloaded-artifact'
+          package: '${{ env.AZURE_FUNCTIONAPP_PROJECT_PATH }}/downloaded-artifact'
