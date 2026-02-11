@@ -8,8 +8,8 @@
     "build": "tsc --project tsconfig.prod.json",
     "test": "mocha -r ts-node/register tests/**/*.spec.ts",
     "test-file": "mocha -r ts-node/register",
-    "coverage": "nyc -r lcov -e .ts -x \"**/*.spec.ts\" npm run test",
-    "coverage-report": "nyc report --reporter=json"
+    "coverage": "c8 -r lcov --exclude \"**/*.spec.ts\" npm run test",
+    "coverage-report": "c8 report --reporter=json"
   },
   "author": {
     "name": "Hanzhang Zeng",
@@ -29,7 +29,7 @@
     "express": "^4.22.1",
     "jest": "^29.7.0",
     "mocha": "^10.4.0",
-    "nyc": "^15.1.0",
+    "c8": "^10.1.2",
     "ts-node": "^10.9.2"
   },
   "dependencies": {
