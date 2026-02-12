@@ -22,11 +22,12 @@ name: Build and deploy .NET project to Azure Function App using OIDC
 #   For the latest list of supported runtimes, see https://learn.microsoft.com/azure/azure-functions/supported-languages
 
 on:
+  # push:
+  #   branches: [ main ]
   workflow_dispatch:
     inputs:
       logLevel:
         description: 'Log level'
-        required: true
         default: 'warning'
         type: choice
         options:
