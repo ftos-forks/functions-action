@@ -57,24 +57,12 @@
     "@actions/http-client": {
       "undici": "^6.23.0"
     },
-    "@azure/identity": {
-      "jws": "^4.0.1"
-    },
-    "@azure/msal-node": {
-      "jws": "^4.0.1"
-    },
     "azure-actions-appservice-rest": {
       "xml2js": "^0.5.0"
     },
     "azure-actions-utility": {
       "shelljs": "^0.8.5",
       "lodash": "^4.17.2"
-    },
-    "express": {
-      "qs": "^6.14.1"
-    },
-    "nyc": {
-      "glob": "^10.5.0"
     }
   }
 }
