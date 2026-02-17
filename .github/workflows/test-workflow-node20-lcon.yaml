@@ -1,4 +1,4 @@
-name: Build and deploy Node.js project to Azure Function App using OIDC
+name: Build on Linux and deploy Node.js project to Azure Function App using OIDC
 
 # CONFIGURATION
 #
@@ -57,7 +57,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: 'Set up Node version: ${{ env.NODE_VERSION }}'
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
           node-version: ${{ env.NODE_VERSION }}
 
@@ -74,7 +74,7 @@ jobs:
         run: npm prune --production
       
       - name: 'Upload artifact for the deployment job'
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: ${{ env.BUILD_ARTIFACT_NAME }}
           path: ${{ env.AZURE_FUNCTIONAPP_PROJECT_PATH }}

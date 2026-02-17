@@ -1,4 +1,4 @@
-name: Deploy PowerShell project to Azure Function App using OIDC
+name: Deploy Windows PowerShell project to Azure Function App using OIDC
 
 # CONFIGURATION
 #

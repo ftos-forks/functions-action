@@ -1,4 +1,4 @@
-name: Build and deploy Python project to Azure Function App using OIDC
+name: Build on Linux and deploy Python project to Azure Function App on Flex Consumption using OIDC
 
 # CONFIGURATION
 #
@@ -67,7 +67,7 @@ jobs:
       # Perform additional steps such as running tests, if needed
 
       - name: 'Upload artifact for the deployment job'
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: ${{ env.BUILD_ARTIFACT_NAME }}
           path: ${{ env.AZURE_FUNCTIONAPP_PROJECT_PATH }}
