@@ -1,4 +1,4 @@
-name: Build and deploy .NET project to Azure Function App using OIDC
+name: Build on Windows and deploy .NET project to Azure Function App using OIDC
 
 # CONFIGURATION
 #

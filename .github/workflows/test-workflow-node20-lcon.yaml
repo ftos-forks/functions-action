@@ -1,4 +1,4 @@
-name: Build and deploy Node.js project to Azure Function App using OIDC
+name: Build on Linux and deploy Node.js project to Azure Function App using OIDC
 
 # CONFIGURATION
 #

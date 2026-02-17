@@ -1,4 +1,4 @@
-name: Build and deploy Python project to Azure Function App using OIDC
+name: Build on Linux and deploy Python project to Azure Function App using OIDC
 
 # CONFIGURATION
 #
