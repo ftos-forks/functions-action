@@ -55,17 +55,12 @@
     "xml2js": "^0.6.2"
   },
   "overrides": {
-    "@actions/http-client": {
-      "undici": "^6.23.0"
-    },
-    "azure-actions-appservice-rest": {
-      "xml2js": "^0.5.0"
-    },
-    "azure-actions-utility": {
-      "shelljs": "^0.8.5",
-      "lodash": "^4.17.2"
-    },
+    "undici": "^6.23.0",
+    "xml2js": "^0.6.2",
+    "shelljs": "^0.8.5",
+    "lodash": "^4.17.2",
     "diff": "^8.0.3",
-    "qs": "^6.14.2"
+    "qs": "^6.14.2",
+    "string_decoder": "^1.3.0"
   }
 }
