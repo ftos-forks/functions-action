@@ -56,7 +56,7 @@ jobs:
         working-directory: ${{ env.AZURE_FUNCTIONAPP_PROJECT_PATH }}
     steps:
       - name: 'Checkout repository'
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: 'Set up .NET version: ${{ env.DOTNET_VERSION }}'
         uses: actions/setup-dotnet@v5
